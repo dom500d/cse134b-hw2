@@ -12,22 +12,6 @@
         </script>
     </head>
     <body>
-        <p><del>html, head, title, meta, 
-            link, script*, style*, 
-            body, main, h1, h2, h3, 
-            p, section, header, 
-            footer, aside, nav, </del> 
-            div, span, <del>br, b, i, 
-            strong, em, code</del>, pre, 
-            hr, <del>a, img, picture, 
-            iframe</del>, audio, video, 
-            source, canvas*, svg* 
-            ul, ol, <del>optgroup, li, form, 
-            label, fieldset, legend, input, 
-            textarea, datalist, select, option, 
-            details, summary, button, </del>template, 
-            table, tr, td, th, caption, col, colgroup, 
-            <del>figure, figcaption</del></p>
         <header>
             <h1>Dominic Orlando</h1>
             <picture>
@@ -47,12 +31,18 @@
                     </ul>
                 </nav>
             </details>
-            
         </header>
         <main>
             <section id="bio-section">
-                <h2>Information about Dominic Orlando</h2>
-                <p>Hi there, I'm <strong>Dominic Orlando</strong>, a 4th year <b>Electrical Engineering </b>student at <i>UC San Diego</i>.</p>
+                <h2># Projects</h2>
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/niIIZu8sXBk?si=FEQf9YUhk7LXYjef" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allowfullscreen>
+                </iframe>
             </section>
             <section id="math-section">
                 <h2>Here's some <em>math!</em></h2>
@@ -77,12 +67,15 @@
                     <figcaption>Power Electrical Engineering Students at 5 different universities</figcaption>
                 </figure>
             </section>
-            <section id="experimental-section">
-                <h2>Inspect Element</h2>
-                <p>If you inspect element, you will see something that was printed with <code>console.log();</code> in javascript!</p>
-            </section>
         </main>
         <footer>
+            <iframe 
+                id="dominicLocation" 
+                title="Dominic Orlando's Location, San Diego, CA"
+                width="300px"
+                height="200"
+                src="https://maps.app.goo.gl/uqYmGvgShG6so7ULA">
+            </iframe>
             <fieldset>
                 <legend>Send Message to Dominic Orlando</legend>
                 <form action="yes.html" method="get">
@@ -110,18 +103,6 @@
                             <option>Telegraph</option>
                         </optgroup>
                     </select>
-                    <br>
-                    <br>
-                    <label for="tip">Would you like to tip me?</label>
-                    <input type="range" list="ticks" min="0" max="5" id="tip" name="tip">
-                    <datalist id="ticks">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </datalist>
                     <br>
                     <br>
                     <button type="submit">Submit</button>
