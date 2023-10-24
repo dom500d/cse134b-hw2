@@ -25,24 +25,27 @@
             hr, a, img, picture, 
             iframe </del>, audio, video, 
             <del>source</del>, canvas*, svg* 
-            ul, ol, <del>optgroup, li, form, 
+            <del>ul, ol, optgroup, li, form, 
             label, fieldset, legend, input, 
             textarea, datalist, select, option, 
-            details, summary, button, </del>template, 
-            <del>table, tr, td, th, caption, col, colgroup,</del> 
-            <del>figure, figcaption</del></p>
+            details, summary, button, template, 
+            table, tr, td, th, caption, col, colgroup,
+            figure, figcaption</del></p>
         <header>
             <h1>Dominic Orlando</h1>
             <picture title="Dominic Orlando">
                 <source srcset="assests/IMG_3740_cropped.webp 250w" type="image/webp">
-                <img alt="Picture of Dominic Orlando" src="IMG_3740_cropped.jpg" height="250px">
+                <img alt="Picture of Dominic Orlando" src="assests/IMG_3740_cropped.jpg" height="250px">
             </picture>
+            <br>
+            <!-- Maybe have the audio be how to pronounce my name? -->
+            <audio controls src="assests/mixkit-arcade-retro-game-over-213.wav"></audio>
             <details>
                 <summary>Channels</summary>
                 <nav>
                     <ul>
                         <li><a href="index.html"># Biography</a></li>
-                        <li><a href="classes.html"># Classes</a></li>
+                        <li><a href="#classes"># Classes</a></li>
                         <li><a href="projects.html"># Projects</a></li>
                         <li><a href="experiments.html"># Experiments</a></li>
                         <li><a href="https://www.linkedin.com/in/dominic-orlando-/"># Linkedin</a></li>
@@ -86,7 +89,7 @@
                 <h2>Inspect Element</h2>
                 <p>If you inspect element, you will see something that was printed with <code>console.log();</code> in javascript!</p>
             </section>
-            <table>
+            <table id="classes">
                 <caption>
                     Education Information
                 </caption>

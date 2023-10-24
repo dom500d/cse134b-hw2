@@ -14,8 +14,9 @@
     <body>
         <header>
             <h1>Dominic Orlando</h1>
-            <picture>
-                <img alt="Picture of Dominic Orlando" src="IMG_3740_cropped.jpg" height="250px">
+            <picture title="Dominic Orlando">
+                <source srcset="assests/IMG_3740_cropped.webp 250w" type="image/webp">
+                <img alt="Picture of Dominic Orlando" src="assests/IMG_3740_cropped.jpg" height="250px">
             </picture>
             <details>
                 <summary>Channels</summary>
@@ -82,16 +83,20 @@
                         src="https://www.youtube.com/embed/rlOBfDDA1Ss?si=wedM7xbSyJlAEPog" 
                         title="YouTube video player" 
                         frameborder="0" 
-                        allowfullscreen
-                    >
+                        allowfullscreen>
+                    </iframe>
                 </div>
                 <div class="projects">
                     <h3>ProstheTech (HARD Hack)</h3>
                     <a href="https://github.com/ymorsi7/ProstheTech">
-                        <img 
-                            src="static/home/projects/hard-hack-edited.jpg" 
-                            alt="Dominic Orlando with his team after being overall runnerup at HARD Hack 2023, a UCSD student run Hackathon." 
-                            width="250px">
+                        <picture>
+                            <source srcset="assests/hard-hack-edited.webp" type="image/webp">
+                            <img 
+                                src="assests/hard-hack-edited.jpg" 
+                                alt="Dominic Orlando with his team after being overall runnerup at HARD Hack 2023, a UCSD student run Hackathon." 
+                                width="250px">
+                        </picture>
+                        
                     </a>
                 </div>
             </section>
@@ -131,5 +136,21 @@
             </fieldset>
             <p>&copy; <a href="mailto:dorlando@ucsd.edu">Dominic Orlando</a></p>
         </footer>
+        <template id="project-template">
+            <div class="projects">
+                <h3>Project Name</h3>
+                <iframe
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/rlOBfDDA1Ss?si=wedM7xbSyJlAEPog" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allowfullscreen
+                >
+                <p>
+                    Information about the project.
+                </p>
+            </div>
+        </template>
     </body>
 </html>
