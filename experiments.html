@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dominic Orlando</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Dominic Orlando's portfolio website">
+        <link rel="stylesheet" href="index.css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <style>
+            del {
+                background-color: red;
+                text-decoration: none;
+            }
+        </style>
+        <script>
+            console.log("Hi!");
+        </script>
+    </head>
+    <body>
+        <p><del>html, head, title, meta, 
+            link, script*, style*, 
+            body, main, h1, h2, h3, 
+            p, section, header, 
+            footer, aside, nav, </del> 
+            div, span, <del>br, b, i, 
+            strong, em, code</del>, pre, 
+            hr, <del>a, img, picture, 
+            iframe</del>, audio, video, 
+            <del>source</del>, canvas*, svg* 
+            ul, ol, <del>optgroup, li, form, 
+            label, fieldset, legend, input, 
+            textarea, datalist, select, option, 
+            details, summary, button, </del>template, 
+            <del>table, tr, td, th, caption, col, colgroup,</del> 
+            <del>figure, figcaption</del></p>
+        <header>
+            <h1>Dominic Orlando</h1>
+            <picture title="Dominic Orlando">
+                <source srcset="assests/IMG_3740_cropped.webp 250w" type="image/webp">
+                <img alt="Picture of Dominic Orlando" src="IMG_3740_cropped.jpg" height="250px">
+            </picture>
+            <details>
+                <summary>Channels</summary>
+                <nav>
+                    <ul>
+                        <li><a href="index.html"># Biography</a></li>
+                        <li><a href="classes.html"># Classes</a></li>
+                        <li><a href="projects.html"># Projects</a></li>
+                        <li><a href="experiments.html"># Experiments</a></li>
+                        <li><a href="https://www.linkedin.com/in/dominic-orlando-/"># Linkedin</a></li>
+                        <li><a href="/assests/Resume.pdf"># Resume</a></li>
+                        <li><a href="https://github.com/dom500d"># Github</a></li>
+                    </ul>
+                </nav>
+            </details>
+            
+        </header>
+        <main>
+            <section id="experiments-section">
+                <h2># Experiments</h2>
+                <pre>Hello
+                                        there      
+                            stylesheet
+                
+                </pre>
+            </section>
+        </main>
+        <footer>
+            <fieldset>
+                <legend>Send Message to Dominic Orlando</legend>
+                <form action="https://httpbin.opg/" method="get">
+                    <label for="contact-form-name">Name: </label>
+                    <input id="contact-form-name" name="name" type="text" required>
+                    <br>
+                    <br>
+                    <label for="contact-form-email">Email: </label>
+                    <input id="contact-form-email" name="email" type="text" required>
+                    <br>
+                    <br>
+                    <label for="contact-form-message">Message: </label>
+                    <textarea id="contact-form-message" name="message"> </textarea>
+                    <br>
+                    <br>
+                    <label for="method-select">How would you like me to get back to you?</label>
+                    <select id="method-select" name="method" required>
+                        <optgroup label="Real">
+                            <option>Email</option>
+                            <option>Telephone</option>
+                            <option>In-Person</option>
+                        </optgroup>
+                        <optgroup label="Fake">
+                            <option>Smoke Signal</option>
+                            <option>Telegraph</option>
+                        </optgroup>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="tip">Would you like to tip me?</label>
+                    <input type="range" list="ticks" min="0" max="5" id="tip" name="tip" required>
+                    <datalist id="ticks">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </datalist>
+                    <br>
+                    <br>
+                    <button type="submit">Submit</button>
+                </form>
+            </fieldset>
+            <p>&copy; <a href="mailto:dorlando@ucsd.edu">Dominic Orlando</a></p>
+        </footer>
+    </body>
+</html>

@@ -18,15 +18,12 @@
         </script>
     </head>
     <body>
-        <p><del>html, head, title, meta, 
-            link, script*, style*, 
-            body, main, h1, h2, h3, 
-            p, section, header, 
-            footer, aside, nav, </del> 
-            div, span, <del>br, b, i, 
-            strong, em, code</del>, pre, 
-            hr, <del>a, img, picture, 
-            iframe</del>, audio, video, 
+        <p>
+            <del>html, head, title, meta, link, script*, style*, body, main, h1, h2, h3, p, section, header, 
+            footer, aside, nav, div </del> , span, <del> br, b, i, 
+            strong, em, code, pre, 
+            hr, a, img, picture, 
+            iframe </del>, audio, video, 
             <del>source</del>, canvas*, svg* 
             ul, ol, <del>optgroup, li, form, 
             label, fieldset, legend, input, 
@@ -58,7 +55,8 @@
         </header>
         <main>
             <section id="bio-section">
-                <h2>Information about Dominic Orlando</h2>
+                <h2># Biography</h2>
+                <hr>
                 <p>Hi there, I'm <strong>Dominic Orlando</strong>, a 4th year <b>Electrical Engineering </b>student at <i>UC San Diego</i>.</p>
             </section>
             <section id="math-section">
@@ -132,13 +130,13 @@
         <footer>
             <fieldset>
                 <legend>Send Message to Dominic Orlando</legend>
-                <form action="yes.html" method="get">
+                <form action="https://httpbin.opg/" method="get">
                     <label for="contact-form-name">Name: </label>
-                    <input id="contact-form-name" name="name" type="text">
+                    <input id="contact-form-name" name="name" type="text" required>
                     <br>
                     <br>
                     <label for="contact-form-email">Email: </label>
-                    <input id="contact-form-email" name="email" type="text">
+                    <input id="contact-form-email" name="email" type="text" required>
                     <br>
                     <br>
                     <label for="contact-form-message">Message: </label>
@@ -146,7 +144,7 @@
                     <br>
                     <br>
                     <label for="method-select">How would you like me to get back to you?</label>
-                    <select id="method-select" name="method">
+                    <select id="method-select" name="method" required>
                         <optgroup label="Real">
                             <option>Email</option>
                             <option>Telephone</option>
@@ -160,7 +158,7 @@
                     <br>
                     <br>
                     <label for="tip">Would you like to tip me?</label>
-                    <input type="range" list="ticks" min="0" max="5" id="tip" name="tip">
+                    <input type="range" list="ticks" min="0" max="5" id="tip" name="tip" required>
                     <datalist id="ticks">
                         <option value="0">0</option>
                         <option value="1">1</option>
