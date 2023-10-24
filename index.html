@@ -7,6 +7,12 @@
         <meta name="description" content="Dominic Orlando's portfolio website">
         <link rel="stylesheet" href="index.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <style>
+            del {
+                background-color: red;
+                text-decoration: none;
+            }
+        </style>
         <script>
             console.log("Hi!");
         </script>
@@ -21,16 +27,17 @@
             strong, em, code</del>, pre, 
             hr, <del>a, img, picture, 
             iframe</del>, audio, video, 
-            source, canvas*, svg* 
+            <del>source</del>, canvas*, svg* 
             ul, ol, <del>optgroup, li, form, 
             label, fieldset, legend, input, 
             textarea, datalist, select, option, 
             details, summary, button, </del>template, 
-            table, tr, td, th, caption, col, colgroup, 
+            <del>table, tr, td, th, caption, col, colgroup,</del> 
             <del>figure, figcaption</del></p>
         <header>
             <h1>Dominic Orlando</h1>
-            <picture>
+            <picture title="Dominic Orlando">
+                <source srcset="assests/IMG_3740_cropped.webp 250w" type="image/webp">
                 <img alt="Picture of Dominic Orlando" src="IMG_3740_cropped.jpg" height="250px">
             </picture>
             <details>
@@ -82,6 +89,13 @@
                 <p>If you inspect element, you will see something that was printed with <code>console.log();</code> in javascript!</p>
             </section>
             <table>
+                <caption>
+                    Education Information
+                </caption>
+                <colgroup>
+                    <col span="1" class="left-side">
+                    <col span="1" class="right-side">
+                </colgroup>
                 <thead>
                     <tr>
                         <th colspan="2">Courses Taken</th>
