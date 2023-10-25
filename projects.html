@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Dominic Orlando</title>
+        <title>Projects</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Dominic Orlando's portfolio website">
+        
+        <!-- Google SEO Meta Tags -->
+        <meta name="description" content="Author: Dominic Orlando, Illustrator: Dominic Orlando, Category: Website">
+        <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
+
+        <!-- Use https:// except for images and css since I don't know how to do it for images or how to add
+        a hash for css defined in style tag and not in external stylesheet-->
+        <meta http-equiv="content-security-policy" 
+            content="default-src https:; img-src http:; style-src 'self' 'unsafe-inline'; font-src http:">
+
+        <!-- Facebook SEO Meta Tags Sample -->
+        <meta property="og:url" content="index.html">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Projects">
+        <meta property="og:description" content="Various projects by Dominic Orlando.">
+        
         <meta name="robots" content="noindex nofollow">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <style>
+            /* del {
+                background-color: red;
+                text-decoration: none;
+            }
+            
+            @font-face {
+                font-family: manrope;
+                src: url(assests/fonts/Manrope-VariableFont_wght.ttf);
+            }
+
+            body {
+                font-family: manrope, sans-serif;
+            }
+
+            table, table td{
+                border: 1px solid black;
+            } */
+        </style>
     </head>
     <body>
         <header>
@@ -22,9 +56,12 @@
                             <br>
                         </td>
                         <td>
-                            <h2 id="projects"> # Projects</h2>
                             <div class="search-bar">
-                                <p>Search the site!</p>
+                                <form>
+                                    <label for="search-bar">Search the Site!</label>
+                                    <input type="text">
+                                    <input type="submit" value="Search!">
+                                </form>
                             </div>
                         </td>
                     </tr>
@@ -50,8 +87,9 @@
                             </nav>
                         </details>
                     </td>
-                    <td>
-                        <section id="projects-section" aria-labelledby="projects">
+                    <section id="projects-section" aria-labelledby="projects">
+                        <td>
+                            <h2 id="projects"># Projects</h2>
                             <div class="projects">
                                 <h3>Aegis</h3>
                                 <iframe 
@@ -66,6 +104,20 @@
                                     <figcaption>Hardware Setup for Aegis</figcaption>
                                 </figure>
                             </div>
+                            <div class="projects">
+                                <h3>ProstheTech (HARD Hack)</h3>
+                                <a href="https://github.com/ymorsi7/ProstheTech">
+                                    <picture>
+                                        <source srcset="assests/hard-hack-edited.webp 300w" type="image/webp" sizes="(max-width: 600px) 200px, 300px">
+                                        <img 
+                                            src="assests/hard-hack-edited.jpg" 
+                                            alt="Dominic Orlando with his team after being overall runnerup at HARD Hack 2023, a UCSD student run Hackathon." 
+                                            width="250">
+                                    </picture>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
                             <div class="projects">
                                 <h3>Project Cars</h3>
                                 <p class="project-info-description">
@@ -104,20 +156,8 @@
                                     <li>Welded differential for drifting (3.46 ratio)</li>
                                 </ul>
                             </div>
-                            <div class="projects">
-                                <h3>ProstheTech (HARD Hack)</h3>
-                                <a href="https://github.com/ymorsi7/ProstheTech">
-                                    <picture>
-                                        <source srcset="assests/hard-hack-edited.webp 300w" type="image/webp" sizes="(max-width: 600px) 200px, 300px">
-                                        <img 
-                                            src="assests/hard-hack-edited.jpg" 
-                                            alt="Dominic Orlando with his team after being overall runnerup at HARD Hack 2023, a UCSD student run Hackathon." 
-                                            width="250">
-                                    </picture>
-                                </a>
-                            </div>
-                        </section>
-                    </td>
+                        </td>
+                    </section>
                 </tr>
             </table>
         </main>
@@ -168,20 +208,5 @@
                 </tr>
             </table>
         </footer>
-        <template id="project-template">
-            <div class="projects">
-                <h3>Project Name</h3>
-                <iframe
-                    width="560" 
-                    height="315" 
-                    src="" 
-                    title="YouTube video player"
-                    allowfullscreen>
-                </iframe>
-                <p>
-                    Information about the project.
-                </p>
-            </div>
-        </template>
     </body>
 </html>

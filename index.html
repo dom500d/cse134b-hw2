@@ -4,7 +4,22 @@
         <title>Dominic Orlando</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Dominic Orlando's portfolio website">
+        
+        <!-- Google SEO Meta Tags -->
+        <meta name="description" content="Author: Dominic Orlando, Illustrator: Dominic Orlando, Category: Website">
+        <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
+
+        <!-- Use https:// except for images and css since I don't know how to do it for images or how to add
+        a hash for css defined in style tag and not in external stylesheet-->
+        <meta http-equiv="content-security-policy" 
+            content="default-src https:; img-src http:; style-src 'self' 'unsafe-inline'; font-src http:">
+
+        <!-- Facebook SEO Meta Tags Sample -->
+        <meta property="og:url" content="index.html">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Dominic Orlando">
+        <meta property="og:description" content="Portfolio Website">
+        
         <meta name="robots" content="noindex nofollow">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <style>
@@ -29,156 +44,127 @@
     </head>
     <body>
         <header>
-            <table id="heading">
-                <tbody>
-                    <tr>
-                        <td>
-                            <h1>Dominic Orlando</h1>
-                            <picture title="Dominic Orlando">
-                                <source srcset="assests/IMG_3740_cropped.webp 250w" type="image/webp" sizes="(max-width: 600px) 200px, 300px">
-                                <img alt="Picture of Dominic Orlando" src="assests/IMG_3740_cropped.jpg" height="250">
-                            </picture>
-                            <br>
-                        </td>
-                        <td>
-                            <h2> # Biography</h2>
-                            <div class="search-bar">
-                                <p>Search the site!</p>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div id="introduction">
+                <h1>Dominic Orlando</h1>
+                <picture title="Dominic Orlando">
+                    <source srcset="assests/IMG_3740_cropped.webp 250w" type="image/webp" sizes="(max-width: 600px) 200px, 300px">
+                    <img alt="Picture of Dominic Orlando" src="assests/IMG_3740_cropped.jpg" height="250">
+                </picture>
+            </div>
+            <div id="search-container">
+                <form>
+                    <label for="search-bar">Search the Site!</label>
+                    <input type="text" id="search-bar">
+                    <input type="submit" value="Search!">
+                </form>
+            </div>
         </header>
         <main>
-            <table id="body">
-                <tr>
-                    <td>
-                        <details open>
-                            <summary>Channels</summary>
-                            <nav>
-                                <ul>
-                                    <li><a href="index.html"># Biography</a></li>
-                                    <li><a href="#classes"># Classes</a></li>
-                                    <li><a href="projects.html"># Projects</a></li>
-                                    <li><a href="experiments.html"># Experiments</a></li>
-                                    <li><a href="https://www.linkedin.com/in/dominic-orlando-/"># Linkedin</a></li>
-                                    <li><a href="/assests/Resume.pdf"># Resume</a></li>
-                                    <li><a href="https://github.com/dom500d"># Github</a></li>
-                                </ul>
-                            </nav>
-                        </details>
-                    </td>
-                    <td>
-                        <section id="bio-section" aria-labelledby="biography">
-                            <h2 id="biography"># Biography</h2>
-                            <p>Hi there, I'm <strong>Dominic Orlando</strong>, a 4th year <b>Electrical Engineering </b>student at <i>UC San Diego</i>. (I'm adding text here to make the thing larger)</p>
-                            <table id="classes">
-                                <caption>
-                                    Education Information
-                                </caption>
-                                <colgroup>
-                                    <col span="1" class="left-side">
-                                    <col span="1" class="right-side">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th colspan="2">Courses Taken</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>ECE 148: Autonomous Vehicles</td>
-                                        <td>ECE 176: Deep Learning & Applications</td>
-                                    </tr>
-                                    <tr>
-                                        <td>ECE 140A/B: Product Engineering</td>
-                                        <td>ECE 174: Linear and Nonlinear Optimization</td>
-                                    </tr>
-                                    <tr>
-                                        <td>ECE 175A: M.L. and Pattern Recognition</td>
-                                        <td>ECE 171A: Linear Control Theory</td>
-                                    </tr>
-                                    <tr>
-                                        <td>ECE 101: Linear Systems</td>
-                                        <td>ECE 109: Engineering Probability & Stats</td>
-                                    </tr>
-                                    <tr>
-                                        <td>ECE 101: Linear Systems</td>
-                                        <td>ECE 109: Engineering Probability & Stats</td>
-                                    </tr>
-                                    <tr>
-                                        <td>ECE 101: Linear Systems</td>
-                                        <td>ECE 109: Engineering Probability & Stats</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </section>
-                    </td>
-                </tr>
-            </table>
+            <div id="navigation">
+                <details open>
+                    <summary>Channels</summary>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html"># Biography</a></li>
+                            <li><a href="#classes"># Classes</a></li>
+                            <li><a href="projects.html"># Projects</a></li>
+                            <li><a href="experiments.html"># Experiments</a></li>
+                            <li><a href="https://www.linkedin.com/in/dominic-orlando-/"># Linkedin</a></li>
+                            <li><a href="/assests/Resume.pdf"># Resume</a></li>
+                            <li><a href="https://github.com/dom500d"># Github</a></li>
+                        </ul>
+                    </nav>
+                </details>
+            </div>
+            <section id="bio-section" aria-labelledby="biography">
+                <h2 id="biography"> # Biography</h2>
+                <p>Hi there, I'm <strong>Dominic Orlando</strong>, a 4th year <b>Electrical Engineering </b>student at <i>UC San Diego</i>.
+                    My specialization is in Machine Learning and Controls, and I have been admitted to the EE Master's program here at UCSD
+                    in the Machine Learning and Data Science research concentration.
+                </p>
+                <table id="classes">
+                    <caption>
+                        Education Information
+                    </caption>
+                    <colgroup>
+                        <col span="1" class="left-side">
+                        <col span="1" class="right-side">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Courses Taken</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ECE 148: Autonomous Vehicles</td>
+                            <td>ECE 176: Deep Learning & Applications</td>
+                        </tr>
+                        <tr>
+                            <td>ECE 140A/B: Product Engineering</td>
+                            <td>ECE 174: Linear and Nonlinear Optimization</td>
+                        </tr>
+                        <tr>
+                            <td>ECE 175A: M.L. and Pattern Recognition</td>
+                            <td>ECE 171A: Linear Control Theory</td>
+                        </tr>
+                        <tr>
+                            <td>ECE 101: Linear Systems</td>
+                            <td>ECE 109: Engineering Probability & Stats</td>
+                        </tr>
+                        <tr>
+                            <td>ECE 101: Linear Systems</td>
+                            <td>ECE 109: Engineering Probability & Stats</td>
+                        </tr>
+                        <tr>
+                            <td>ECE 101: Linear Systems</td>
+                            <td>ECE 109: Engineering Probability & Stats</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </main>
         <footer>
-            <table id="footer">
-                <tr>
-                    <td>
-                        <p>&copy; <a href="mailto:dorlando@ucsd.edu">Dominic Orlando</a></p>
-                    </td>
-                    <td>
-                        <fieldset>
-                            <legend>Send Message to Dominic Orlando</legend>
-                            <form action="https://httpbin.opg/" method="get">
-                                <label for="contact-form-name">Name: </label>
-                                <input id="contact-form-name" name="name" type="text" required>
-                                <label for="contact-form-email">Email: </label>
-                                <input id="contact-form-email" name="email" type="text" required>
-                                <label for="contact-form-message">Message: </label>
-                                <textarea id="contact-form-message" name="message"> </textarea>
-                                <label for="method-select">How would you like me to get back to you?</label>
-                                <select id="method-select" name="method">
-                                    <optgroup label="Real">
-                                        <option>Email</option>
-                                        <option>Telephone</option>
-                                        <option>In-Person</option>
-                                    </optgroup>
-                                    <optgroup label="Fake">
-                                        <option>Smoke Signal</option>
-                                        <option>Telegraph</option>
-                                    </optgroup>
-                                </select>
-                                <label for="tip">Would you like to tip me?</label>
-                                <input type="range" list="ticks" min="0" max="5" id="tip" name="tip">
-                                <datalist id="ticks">
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </datalist>
-                                <br>
-                                <br>
-                                <button type="submit">Submit</button>
-                            </form>
-                        </fieldset>
-                    </td>
-                </tr>
-            </table>
+            <p id="copyright">&copy; <a href="mailto:dorlando@ucsd.edu">Dominic Orlando</a></p>
+            <section id="contact-me" aria-labelledby="contact-header">
+                <h2 id="contact-header">Please Contact Me with any Opportunities!</h2>
+                <fieldset>
+                    <legend>Send Message to Dominic Orlando</legend>
+                    <form action="https://httpbin.opg/" method="get">
+                        <label for="contact-form-name">Name: </label>
+                        <input id="contact-form-name" name="name" type="text" required>
+                        <label for="contact-form-email">Email: </label>
+                        <input id="contact-form-email" name="email" type="text" required>
+                        <label for="contact-form-message">Message: </label>
+                        <textarea id="contact-form-message" name="message"> </textarea>
+                        <label for="method-select">How would you like me to get back to you?</label>
+                        <select id="method-select" name="method">
+                            <optgroup label="Real">
+                                <option>Email</option>
+                                <option>Telephone</option>
+                                <option>In-Person</option>
+                            </optgroup>
+                            <optgroup label="Fake">
+                                <option>Smoke Signal</option>
+                                <option>Telegraph</option>
+                            </optgroup>
+                        </select>
+                        <label for="tip">Would you like to tip me?</label>
+                        <input type="range" list="ticks" min="0" max="5" id="tip" name="tip">
+                        <datalist id="ticks">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </datalist>
+                        <br>
+                        <br>
+                        <button type="submit">Submit</button>
+                    </form>
+                </fieldset>
+            </section>      
         </footer>
-                
-      
-        <!-- <p>
-            <del>html, head, title, meta, link, script*, style*, body, main, h1, h2, h3, p, section, header, 
-            footer, aside, nav, div, span,  br, b, i, 
-            strong, em, code, pre, 
-            hr, a, img, picture, 
-            iframe, audio, video, 
-            source, canvas*, svg* 
-            ul, ol, optgroup, li, form, 
-            label, fieldset, legend, input, 
-            textarea, datalist, select, option, 
-            details, summary, button, template, 
-            table, tr, td, th, caption, col, colgroup,
-            figure, figcaption</del></p> -->
     </body>
 </html>
