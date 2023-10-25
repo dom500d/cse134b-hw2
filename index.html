@@ -12,7 +12,11 @@
         <!-- Use https:// except for images and css since I don't know how to do it for images or how to add
         a hash for css defined in style tag and not in external stylesheet-->
         <meta http-equiv="content-security-policy" 
-            content="default-src https:; img-src http:; style-src 'self' 'unsafe-inline'; font-src http:">
+            content="default-src https:; 
+                     img-src http:; 
+                     style-src 'self' 'unsafe-inline'; 
+                     font-src http:
+                     script-src 'self';">
 
         <!-- Facebook SEO Meta Tags Sample -->
         <meta property="og:url" content="index.html">
@@ -51,15 +55,6 @@
                     <img alt="Picture of Dominic Orlando" src="assests/IMG_3740_cropped.jpg" height="250">
                 </picture>
             </div>
-            <div id="search-container">
-                <form>
-                    <label for="search-bar">Search the Site!</label>
-                    <input type="text" id="search-bar">
-                    <input type="submit" value="Search!">
-                </form>
-            </div>
-        </header>
-        <main>
             <div id="navigation">
                 <details open>
                     <summary>Channels</summary>
@@ -76,52 +71,67 @@
                     </nav>
                 </details>
             </div>
+        </header>
+        <main>
             <section id="bio-section" aria-labelledby="biography">
-                <h2 id="biography"> # Biography</h2>
-                <p>Hi there, I'm <strong>Dominic Orlando</strong>, a 4th year <b>Electrical Engineering </b>student at <i>UC San Diego</i>.
-                    My specialization is in Machine Learning and Controls, and I have been admitted to the EE Master's program here at UCSD
-                    in the Machine Learning and Data Science research concentration.
-                </p>
-                <table id="classes">
-                    <caption>
-                        Education Information
-                    </caption>
-                    <colgroup>
-                        <col span="1" class="left-side">
-                        <col span="1" class="right-side">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th colspan="2">Courses Taken</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>ECE 148: Autonomous Vehicles</td>
-                            <td>ECE 176: Deep Learning & Applications</td>
-                        </tr>
-                        <tr>
-                            <td>ECE 140A/B: Product Engineering</td>
-                            <td>ECE 174: Linear and Nonlinear Optimization</td>
-                        </tr>
-                        <tr>
-                            <td>ECE 175A: M.L. and Pattern Recognition</td>
-                            <td>ECE 171A: Linear Control Theory</td>
-                        </tr>
-                        <tr>
-                            <td>ECE 101: Linear Systems</td>
-                            <td>ECE 109: Engineering Probability & Stats</td>
-                        </tr>
-                        <tr>
-                            <td>ECE 101: Linear Systems</td>
-                            <td>ECE 109: Engineering Probability & Stats</td>
-                        </tr>
-                        <tr>
-                            <td>ECE 101: Linear Systems</td>
-                            <td>ECE 109: Engineering Probability & Stats</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <!-- Using an article below looks like i can't use the h2 to label the section. This is why I decided to use a div here.
+                I could use a section but I feel like again I then can't use the heading to label the over-arching section here. -->
+                <div id="bio-section-header">
+                    <h2 id="biography"> # Biography</h2>
+                    <div id="search-container">
+                        <form>
+                            <label for="search-bar">Search the Site!</label>
+                            <input type="text" id="search-bar">
+                            <input type="submit" value="Search!">
+                        </form>
+                    </div>
+                </div>
+                <div id="bio-section-info">
+                    <p>Hi there, I'm <strong>Dominic Orlando</strong>, a 4th year <b>Electrical Engineering </b>student at <i>UC San Diego</i>.
+                        My specialization is in Machine Learning and Controls, and I have been admitted to the EE Master's program here at UCSD
+                        in the Machine Learning and Data Science research concentration.
+                    </p>
+                    <table id="classes">
+                        <caption>
+                            Education Information
+                        </caption>
+                        <colgroup>
+                            <col span="1" class="left-side">
+                            <col span="1" class="right-side">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Courses Taken</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ECE 148: Autonomous Vehicles</td>
+                                <td>ECE 176: Deep Learning & Applications</td>
+                            </tr>
+                            <tr>
+                                <td>ECE 140A/B: Product Engineering</td>
+                                <td>ECE 174: Linear and Nonlinear Optimization</td>
+                            </tr>
+                            <tr>
+                                <td>ECE 175A: M.L. and Pattern Recognition</td>
+                                <td>ECE 171A: Linear Control Theory</td>
+                            </tr>
+                            <tr>
+                                <td>ECE 101: Linear Systems</td>
+                                <td>ECE 109: Engineering Probability & Stats</td>
+                            </tr>
+                            <tr>
+                                <td>ECE 101: Linear Systems</td>
+                                <td>ECE 109: Engineering Probability & Stats</td>
+                            </tr>
+                            <tr>
+                                <td>ECE 101: Linear Systems</td>
+                                <td>ECE 109: Engineering Probability & Stats</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
         </main>
         <footer>

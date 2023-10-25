@@ -12,7 +12,10 @@
         <!-- Use https:// except for images and css since I don't know how to do it for images or how to add
         a hash for css defined in style tag and not in external stylesheet-->
         <meta http-equiv="content-security-policy" 
-            content="default-src https:; img-src http:; style-src 'self' 'unsafe-inline'; font-src http:">
+            content="default-src https:; 
+                     img-src http:; 
+                     style-src 'self' 'unsafe-inline'; 
+                     font-src http:">
 
         <!-- Facebook SEO Meta Tags Sample -->
         <meta property="og:url" content="index.html">
@@ -51,15 +54,6 @@
                     <img alt="Picture of Dominic Orlando" src="assests/IMG_3740_cropped.jpg" height="250">
                 </picture>
             </div>
-            <div id="search-container">
-                <form>
-                    <label for="search-bar">Search the Site!</label>
-                    <input type="text" id="search-bar">
-                    <input type="submit" value="Search!">
-                </form>
-            </div>
-        </header>
-        <main>
             <div id="navigation">
                 <details open>
                     <summary>Channels</summary>
@@ -76,71 +70,86 @@
                     </nav>
                 </details>
             </div>
+        </header>
+        <main>
             <section id="projects-section" aria-labelledby="projects">
-                <h2 id="projects"># Projects</h2>
-                <div class="projects">
-                    <h3>Aegis</h3>
-                    <iframe 
-                        width="560" 
-                        height="315" 
-                        src="https://www.youtube.com/embed/niIIZu8sXBk?si=FEQf9YUhk7LXYjef" 
-                        title="YouTube video player" 
-                        allowfullscreen>
-                    </iframe>
-                    <figure>
-                        <img src="assests/aegis-hardware.png" width="300">
-                        <figcaption>Hardware Setup for Aegis</figcaption>
-                    </figure>
+                <!-- Using an article below looks like i can't use the h2 to label the section. This is why I decided to use a div here.
+                I could use a section but I feel like again I then can't use the heading to label the over-arching section here. -->
+                <div id="projects-section-header">
+                    <h2 id="projects"> # Projects</h2>
+                    <div id="search-container">
+                        <form>
+                            <label for="search-bar">Search the Site!</label>
+                            <input type="text" id="search-bar">
+                            <input type="submit" value="Search!">
+                        </form>
+                    </div>
                 </div>
-                <div class="projects">
-                    <h3>ProstheTech (HARD Hack)</h3>
-                    <a href="https://github.com/ymorsi7/ProstheTech">
-                        <picture>
-                            <source srcset="assests/hard-hack-edited.webp 300w" type="image/webp" sizes="(max-width: 600px) 200px, 300px">
-                            <img 
-                                src="assests/hard-hack-edited.jpg" 
-                                alt="Dominic Orlando with his team after being overall runnerup at HARD Hack 2023, a UCSD student run Hackathon." 
-                                width="250">
-                        </picture>
-                    </a>
-                </div>
-                <div class="projects">
-                    <h3>Project Cars</h3>
-                    <p class="project-info-description">
-                        This is my first project car, my 2002 BMW e46 325ci. 
-                        This car started off its 
-                        life as an automatic, but didn't stay
-                        that way for long once I got the car. 
-                    </p>
-                    <iframe 
-                        width="560" 
-                        height="315" 
-                        src="https://www.youtube.com/embed/rlOBfDDA1Ss?si=wedM7xbSyJlAEPog" 
-                        title="YouTube video player" 
-                        allowfullscreen>
-                    </iframe>
-                    <ul>
-                        <li>Manual swapped with a 5-speed from an e46
-                            <ul>
-                                <li>Lightened flywheel</li>
-                                <li>Stronger clutch and pressure plate</li>
-                            </ul>
-                        </li>
-                        <li>Custom exhaust header and downpipe</li>
-                        <li>GT35-clone turbocharger</li>
-                        <li>Electronic boost control</li>
-                        <li>Wideband O2 sensor</li>
-                        <li>Custom MS43 (ECU) tuning</li>
-                        <li>MAF from an Audi RS4</li>
-                        <li>M50 manifold conversion</li>
-                        <li>Freshly built engine
-                            <ul>
-                                <li>3.0L assembly</li>
-                                <li>New gaskets with a thicker headgasket with cutting rings</li>
-                            </ul>
-                        </li>
-                        <li>Welded differential for drifting (3.46 ratio)</li>
-                    </ul>
+                <div id="projects-section-info">
+                    <article class="projects" aria-labelledby="aegis">
+                        <h3 class="project-heading" id="aegis">Aegis</h3>
+                        <iframe 
+                            width="560" 
+                            height="315" 
+                            src="https://www.youtube.com/embed/niIIZu8sXBk?si=FEQf9YUhk7LXYjef" 
+                            title="YouTube video player" 
+                            allowfullscreen>
+                        </iframe>
+                        <figure>
+                            <img src="assests/aegis-hardware.png" width="300">
+                            <figcaption>Hardware Setup for Aegis</figcaption>
+                        </figure>
+                    </article>
+                    <article class="projects" aria-labelledby="prosthetech">
+                        <h3 class="project-heading" id="prosthetech">ProstheTech (HARD Hack)</h3>
+                        <a href="https://github.com/ymorsi7/ProstheTech">
+                            <picture>
+                                <source srcset="assests/hard-hack-edited.webp 300w" type="image/webp" sizes="(max-width: 600px) 200px, 300px">
+                                <img 
+                                    src="assests/hard-hack-edited.jpg" 
+                                    alt="Dominic Orlando with his team after being overall runnerup at HARD Hack 2023, a UCSD student run Hackathon." 
+                                    width="250">
+                            </picture>
+                        </a>
+                    </article>
+                    <article class="projects" aria-labelledby="project-cars">
+                        <h3 class="project-heading" id="project-cars">Project Cars</h3>
+                        <p class="project-info-description">
+                            This is my first project car, my 2002 BMW e46 325ci. 
+                            This car started off its 
+                            life as an automatic, but didn't stay
+                            that way for long once I got the car. 
+                        </p>
+                        <iframe 
+                            width="560" 
+                            height="315" 
+                            src="https://www.youtube.com/embed/rlOBfDDA1Ss?si=wedM7xbSyJlAEPog" 
+                            title="YouTube video player" 
+                            allowfullscreen>
+                        </iframe>
+                        <ul>
+                            <li>Manual swapped with a 5-speed from an e46
+                                <ul>
+                                    <li>Lightened flywheel</li>
+                                    <li>Stronger clutch and pressure plate</li>
+                                </ul>
+                            </li>
+                            <li>Custom exhaust header and downpipe</li>
+                            <li>GT35-clone turbocharger</li>
+                            <li>Electronic boost control</li>
+                            <li>Wideband O2 sensor</li>
+                            <li>Custom MS43 (ECU) tuning</li>
+                            <li>MAF from an Audi RS4</li>
+                            <li>M50 manifold conversion</li>
+                            <li>Freshly built engine
+                                <ul>
+                                    <li>3.0L assembly</li>
+                                    <li>New gaskets with a thicker headgasket with cutting rings</li>
+                                </ul>
+                            </li>
+                            <li>Welded differential for drifting (3.46 ratio)</li>
+                        </ul>
+                    </article>
                 </div>
             </section>
         </main>
