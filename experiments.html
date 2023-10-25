@@ -5,126 +5,160 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Dominic Orlando's portfolio website">
-        <link rel="stylesheet" href="index.css">
+        <meta name="robots" content="noindex nofollow">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <style>
-            del {
-                background-color: red;
-                text-decoration: none;
-            }
-        </style>
         <script>
-            console.log("Hi!");
+            document.addEventListener("DOMContentLoaded", (event) => {
+                console.log("Hi!");
+                const canvas = document.querySelector("canvas");
+                const ctx = canvas.getContext("2d");
+                ctx.fillStyle = "black";
+                ctx.fillRect(10, 10, 100, 100);
+            });
         </script>
     </head>
     <body>
         <header>
-            <h1>Dominic Orlando</h1>
-            <picture title="Dominic Orlando">
-                <source srcset="assests/IMG_3740_cropped.webp 250w" type="image/webp">
-                <img alt="Picture of Dominic Orlando" src="assests/IMG_3740_cropped.jpg" height="250px">
-            </picture>
-            <details>
-                <summary>Channels</summary>
-                <nav>
-                    <ul>
-                        <li><a href="index.html"># Biography</a></li>
-                        <li><a href="index.html#classes"># Classes</a></li>
-                        <li><a href="projects.html"># Projects</a></li>
-                        <li><a href="experiments.html"># Experiments</a></li>
-                        <li><a href="https://www.linkedin.com/in/dominic-orlando-/"># Linkedin</a></li>
-                        <li><a href="/assests/Resume.pdf"># Resume</a></li>
-                        <li><a href="https://github.com/dom500d"># Github</a></li>
-                    </ul>
-                </nav>
-            </details>
+            <table id="heading">
+                <tbody>
+                    <tr>
+                        <td>
+                            <h1>Dominic Orlando</h1>
+                            <picture title="Dominic Orlando">
+                                <source srcset="assests/IMG_3740_cropped.webp 250w" type="image/webp" sizes="(max-width: 600px) 200px, 300px">
+                                <img alt="Picture of Dominic Orlando" src="assests/IMG_3740_cropped.jpg" height="250">
+                            </picture>
+                            <br>
+                        </td>
+                        <td>
+                            <h2 id="experiments"> # Experiments</h2>
+                            <div class="search-bar">
+                                <p>Search the site!</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </header>
         <main>
-            <section id="experiments-section">
-                <h2># Experiments</h2>
-                <pre>Hello
-                                        there      
-                            stylesheet
-                </pre>
-                <ol>
-                    <li>Wake up</li>
-                    <li>Ride bike</li>
-                    <li>Sleep</li>
-                    <li>Repeat</li>
-                </ol>
-                <video controls src="assests/13-13_NA1-4714193734_01.webm" width="500px"></video>
-                <h3>Here's some <em>math!</em></h3>
-                <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
-                    <mrow>
-                        <mi>e</mi>
-                        <mo>=</mo>
-                        <mi>m</mi>
-                        <mo>&InvisibleTimes;</mo>
-                        <msup>
-                            <mi>c</mi>
-                            <mn>2</mn>
-                        </msup>
-                    </mrow>
-                </math>
-                <p>I'm going to test the use of the <code>svg</code> tag! 
-                    <span id="svg-test">
-                        <svg
-                        viewbox="0 0 300 100"
-                        xmlns="http://www.w3.org/2000/svg"
-                        stroke="red"
-                        fill="grey">
-                            <circle cx = "50" cy="50" r="50"></circle>
-                        </svg>
-                    </span>
-                </p>
-            </section>
+            <table id="body">
+                <tr>
+                    <td>
+                        <details open>
+                            <summary>Channels</summary>
+                            <nav>
+                                <ul>
+                                    <li><a href="index.html"># Biography</a></li>
+                                    <li><a href="#classes"># Classes</a></li>
+                                    <li><a href="projects.html"># Projects</a></li>
+                                    <li><a href="experiments.html"># Experiments</a></li>
+                                    <li><a href="https://www.linkedin.com/in/dominic-orlando-/"># Linkedin</a></li>
+                                    <li><a href="/assests/Resume.pdf"># Resume</a></li>
+                                    <li><a href="https://github.com/dom500d"># Github</a></li>
+                                </ul>
+                            </nav>
+                        </details>
+                    </td>
+                    <td>
+                        <section id="experiments-section" aria-labelledby="experiments">
+                           <pre>Hello
+                                                    there      
+                                        stylesheet
+                            </pre>
+                            <p>I can't wait until I can use <code>console.log();</code> when we put JavaScript on our website!</p>
+                            <aside>
+                                <h3>Day in the life: </h3>
+                                <ol>
+                                    <li>Wake up</li>
+                                    <li>Ride bike</li>
+                                    <li>Sleep</li>
+                                    <li>Repeat</li>
+                                </ol>
+                            </aside>
+                            <h3>Katarina Gaming</h3>
+                            <video controls src="assests/13-13_NA1-4714193734_01.webm" width="500"></video>
+                            <h3>Here's some <em>math!</em></h3>
+                            <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+                                <mrow>
+                                    <mi>e</mi>
+                                    <mo>=</mo>
+                                    <mi>m</mi>
+                                    <mo>&InvisibleTimes;</mo>
+                                    <msup>
+                                        <mi>c</mi>
+                                        <mn>2</mn>
+                                    </msup>
+                                </mrow>
+                            </math>
+                            <p>I'm going to <span class="italics">test</span> the use of the <code>svg</code> tag! 
+                                <span id="svg-test">
+                                    <svg
+                                    viewbox="0 0 500 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    stroke="red"
+                                    fill="grey">
+                                        <circle cx = "50" cy="50" r="10"></circle>
+                                    </svg>
+                                </span>
+                            </p>
+                            <h3>I don't know how to use a Canvas tag</h3>
+                            <canvas>
+                                This is a canvas displaying a black square.
+                            </canvas>
+                            <h3>Here's some sound!</h3>
+                            <!-- Maybe have the audio be how to pronounce my name? -->
+                            <audio controls src="assests/mixkit-arcade-retro-game-over-213.wav"></audio>
+                        </section>
+                    </td>
+                </tr>
+            </table>
         </main>
         <footer>
-            <fieldset>
-                <legend>Send Message to Dominic Orlando</legend>
-                <form action="https://httpbin.opg/" method="get">
-                    <label for="contact-form-name">Name: </label>
-                    <input id="contact-form-name" name="name" type="text" required>
-                    <br>
-                    <br>
-                    <label for="contact-form-email">Email: </label>
-                    <input id="contact-form-email" name="email" type="text" required>
-                    <br>
-                    <br>
-                    <label for="contact-form-message">Message: </label>
-                    <textarea id="contact-form-message" name="message"> </textarea>
-                    <br>
-                    <br>
-                    <label for="method-select">How would you like me to get back to you?</label>
-                    <select id="method-select" name="method" required>
-                        <optgroup label="Real">
-                            <option>Email</option>
-                            <option>Telephone</option>
-                            <option>In-Person</option>
-                        </optgroup>
-                        <optgroup label="Fake">
-                            <option>Smoke Signal</option>
-                            <option>Telegraph</option>
-                        </optgroup>
-                    </select>
-                    <br>
-                    <br>
-                    <label for="tip">Would you like to tip me?</label>
-                    <input type="range" list="ticks" min="0" max="5" id="tip" name="tip" required>
-                    <datalist id="ticks">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </datalist>
-                    <br>
-                    <br>
-                    <button type="submit">Submit</button>
-                </form>
-            </fieldset>
-            <p>&copy; <a href="mailto:dorlando@ucsd.edu">Dominic Orlando</a></p>
+            <table id="footer">
+                <tr>
+                    <td>
+                        <p>&copy; <a href="mailto:dorlando@ucsd.edu">Dominic Orlando</a></p>
+                    </td>
+                    <td>
+                        <fieldset>
+                            <legend>Send Message to Dominic Orlando</legend>
+                            <form action="https://httpbin.opg/" method="get">
+                                <label for="contact-form-name">Name: </label>
+                                <input id="contact-form-name" name="name" type="text" required>
+                                <label for="contact-form-email">Email: </label>
+                                <input id="contact-form-email" name="email" type="text" required>
+                                <label for="contact-form-message">Message: </label>
+                                <textarea id="contact-form-message" name="message"> </textarea>
+                                <label for="method-select">How would you like me to get back to you?</label>
+                                <select id="method-select" name="method">
+                                    <optgroup label="Real">
+                                        <option>Email</option>
+                                        <option>Telephone</option>
+                                        <option>In-Person</option>
+                                    </optgroup>
+                                    <optgroup label="Fake">
+                                        <option>Smoke Signal</option>
+                                        <option>Telegraph</option>
+                                    </optgroup>
+                                </select>
+                                <label for="tip">Would you like to tip me?</label>
+                                <input type="range" list="ticks" min="0" max="5" id="tip" name="tip">
+                                <datalist id="ticks">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </datalist>
+                                <br>
+                                <br>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </fieldset>
+                    </td>
+                </tr>
+            </table>
         </footer>
     </body>
 </html>

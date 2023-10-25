@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Dominic Orlando's portfolio website">
+        <meta name="robots" content="noindex nofollow">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <style>
             del {
@@ -14,163 +15,170 @@
             
             @font-face {
                 font-family: manrope;
-                src: url(/fonts/Manrope-VariableFont_wght.ttf);
+                src: url(assests/fonts/Manrope-VariableFont_wght.ttf);
             }
 
             body {
                 font-family: manrope, sans-serif;
             }
+
+            table, table td{
+                border: 1px solid black;
+            }
         </style>
-        <script>
-            console.log("Hi!");
-        </script>
     </head>
     <body>
-        <p>
+        <header>
+            <table id="heading">
+                <tbody>
+                    <tr>
+                        <td>
+                            <h1>Dominic Orlando</h1>
+                            <picture title="Dominic Orlando">
+                                <source srcset="assests/IMG_3740_cropped.webp 250w" type="image/webp" sizes="(max-width: 600px) 200px, 300px">
+                                <img alt="Picture of Dominic Orlando" src="assests/IMG_3740_cropped.jpg" height="250">
+                            </picture>
+                            <br>
+                        </td>
+                        <td>
+                            <h2> # Biography</h2>
+                            <div class="search-bar">
+                                <p>Search the site!</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </header>
+        <main>
+            <table id="body">
+                <tr>
+                    <td>
+                        <details open>
+                            <summary>Channels</summary>
+                            <nav>
+                                <ul>
+                                    <li><a href="index.html"># Biography</a></li>
+                                    <li><a href="#classes"># Classes</a></li>
+                                    <li><a href="projects.html"># Projects</a></li>
+                                    <li><a href="experiments.html"># Experiments</a></li>
+                                    <li><a href="https://www.linkedin.com/in/dominic-orlando-/"># Linkedin</a></li>
+                                    <li><a href="/assests/Resume.pdf"># Resume</a></li>
+                                    <li><a href="https://github.com/dom500d"># Github</a></li>
+                                </ul>
+                            </nav>
+                        </details>
+                    </td>
+                    <td>
+                        <section id="bio-section" aria-labelledby="biography">
+                            <h2 id="biography"># Biography</h2>
+                            <p>Hi there, I'm <strong>Dominic Orlando</strong>, a 4th year <b>Electrical Engineering </b>student at <i>UC San Diego</i>. (I'm adding text here to make the thing larger)</p>
+                            <table id="classes">
+                                <caption>
+                                    Education Information
+                                </caption>
+                                <colgroup>
+                                    <col span="1" class="left-side">
+                                    <col span="1" class="right-side">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Courses Taken</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ECE 148: Autonomous Vehicles</td>
+                                        <td>ECE 176: Deep Learning & Applications</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ECE 140A/B: Product Engineering</td>
+                                        <td>ECE 174: Linear and Nonlinear Optimization</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ECE 175A: M.L. and Pattern Recognition</td>
+                                        <td>ECE 171A: Linear Control Theory</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ECE 101: Linear Systems</td>
+                                        <td>ECE 109: Engineering Probability & Stats</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ECE 101: Linear Systems</td>
+                                        <td>ECE 109: Engineering Probability & Stats</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ECE 101: Linear Systems</td>
+                                        <td>ECE 109: Engineering Probability & Stats</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </td>
+                </tr>
+            </table>
+        </main>
+        <footer>
+            <table id="footer">
+                <tr>
+                    <td>
+                        <p>&copy; <a href="mailto:dorlando@ucsd.edu">Dominic Orlando</a></p>
+                    </td>
+                    <td>
+                        <fieldset>
+                            <legend>Send Message to Dominic Orlando</legend>
+                            <form action="https://httpbin.opg/" method="get">
+                                <label for="contact-form-name">Name: </label>
+                                <input id="contact-form-name" name="name" type="text" required>
+                                <label for="contact-form-email">Email: </label>
+                                <input id="contact-form-email" name="email" type="text" required>
+                                <label for="contact-form-message">Message: </label>
+                                <textarea id="contact-form-message" name="message"> </textarea>
+                                <label for="method-select">How would you like me to get back to you?</label>
+                                <select id="method-select" name="method">
+                                    <optgroup label="Real">
+                                        <option>Email</option>
+                                        <option>Telephone</option>
+                                        <option>In-Person</option>
+                                    </optgroup>
+                                    <optgroup label="Fake">
+                                        <option>Smoke Signal</option>
+                                        <option>Telegraph</option>
+                                    </optgroup>
+                                </select>
+                                <label for="tip">Would you like to tip me?</label>
+                                <input type="range" list="ticks" min="0" max="5" id="tip" name="tip">
+                                <datalist id="ticks">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </datalist>
+                                <br>
+                                <br>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </fieldset>
+                    </td>
+                </tr>
+            </table>
+        </footer>
+                
+      
+        <!-- <p>
             <del>html, head, title, meta, link, script*, style*, body, main, h1, h2, h3, p, section, header, 
-            footer, aside, nav, div </del> , span, <del> br, b, i, 
+            footer, aside, nav, div, span,  br, b, i, 
             strong, em, code, pre, 
             hr, a, img, picture, 
             iframe, audio, video, 
-            source</del>, canvas*, svg* 
-            <del>ul, ol, optgroup, li, form, 
+            source, canvas*, svg* 
+            ul, ol, optgroup, li, form, 
             label, fieldset, legend, input, 
             textarea, datalist, select, option, 
             details, summary, button, template, 
             table, tr, td, th, caption, col, colgroup,
-            figure, figcaption</del></p>
-        <header>
-            <h1>Dominic Orlando</h1>
-            <picture title="Dominic Orlando">
-                <source srcset="assests/IMG_3740_cropped.webp 250w" type="image/webp">
-                <img alt="Picture of Dominic Orlando" src="assests/IMG_3740_cropped.jpg" height="250px">
-            </picture>
-            <br>
-            <!-- Maybe have the audio be how to pronounce my name? -->
-            <audio controls src="assests/mixkit-arcade-retro-game-over-213.wav"></audio>
-            <details>
-                <summary>Channels</summary>
-                <nav>
-                    <ul>
-                        <li><a href="index.html"># Biography</a></li>
-                        <li><a href="#classes"># Classes</a></li>
-                        <li><a href="projects.html"># Projects</a></li>
-                        <li><a href="experiments.html"># Experiments</a></li>
-                        <li><a href="https://www.linkedin.com/in/dominic-orlando-/"># Linkedin</a></li>
-                        <li><a href="/assests/Resume.pdf"># Resume</a></li>
-                        <li><a href="https://github.com/dom500d"># Github</a></li>
-                    </ul>
-                </nav>
-            </details>
-        </header>
-        <main>
-            <section id="bio-section">
-                <h2># Biography</h2>
-                <hr>
-                <p>Hi there, I'm <strong>Dominic Orlando</strong>, a 4th year <b>Electrical Engineering </b>student at <i>UC San Diego</i>.</p>
-            </section>
-            <section id="math-section">
-                
-                <aside>
-                    <h3>Einstien's Vision</h3>
-                    <p>Einstien had an interesting life. </p>
-                </aside>
-                <figure>
-                    <img src="assests/EE-students.png" width="300px">
-                    <figcaption>Power Electrical Engineering Students at 5 different universities</figcaption>
-                </figure>
-            </section>
-            <section id="experimental-section">
-                <h2>Inspect Element</h2>
-                <p>If you inspect element, you will see something that was printed with <code>console.log();</code> in javascript!</p>
-            </section>
-            <table id="classes">
-                <caption>
-                    Education Information
-                </caption>
-                <colgroup>
-                    <col span="1" class="left-side">
-                    <col span="1" class="right-side">
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th colspan="2">Courses Taken</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>ECE 148: Autonomous Vehicles</td>
-                        <td>ECE 176: Deep Learning & Applications</td>
-                    </tr>
-                    <tr>
-                        <td>ECE 140A/B: Product Engineering</td>
-                        <td>ECE 174: Linear and Nonlinear Optimization</td>
-                    </tr>
-                    <tr>
-                        <td>ECE 175A: M.L. and Pattern Recognition</td>
-                        <td>ECE 171A: Linear Control Theory</td>
-                    </tr>
-                    <tr>
-                        <td>ECE 101: Linear Systems</td>
-                        <td>ECE 109: Engineering Probability & Stats</td>
-                    </tr>
-                    <tr>
-                        <td>ECE 101: Linear Systems</td>
-                        <td>ECE 109: Engineering Probability & Stats</td>
-                    </tr>
-                    <tr>
-                        <td>ECE 101: Linear Systems</td>
-                        <td>ECE 109: Engineering Probability & Stats</td>
-                    </tr>
-                </tbody>
-            </table>
-        </main>
-        <footer>
-            <fieldset>
-                <legend>Send Message to Dominic Orlando</legend>
-                <form action="https://httpbin.opg/" method="get">
-                    <label for="contact-form-name">Name: </label>
-                    <input id="contact-form-name" name="name" type="text" required>
-                    <br>
-                    <br>
-                    <label for="contact-form-email">Email: </label>
-                    <input id="contact-form-email" name="email" type="text" required>
-                    <br>
-                    <br>
-                    <label for="contact-form-message">Message: </label>
-                    <textarea id="contact-form-message" name="message"> </textarea>
-                    <br>
-                    <br>
-                    <label for="method-select">How would you like me to get back to you?</label>
-                    <select id="method-select" name="method" required>
-                        <optgroup label="Real">
-                            <option>Email</option>
-                            <option>Telephone</option>
-                            <option>In-Person</option>
-                        </optgroup>
-                        <optgroup label="Fake">
-                            <option>Smoke Signal</option>
-                            <option>Telegraph</option>
-                        </optgroup>
-                    </select>
-                    <br>
-                    <br>
-                    <label for="tip">Would you like to tip me?</label>
-                    <input type="range" list="ticks" min="0" max="5" id="tip" name="tip" required>
-                    <datalist id="ticks">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </datalist>
-                    <br>
-                    <br>
-                    <button type="submit">Submit</button>
-                </form>
-            </fieldset>
-            <p>&copy; <a href="mailto:dorlando@ucsd.edu">Dominic Orlando</a></p>
-        </footer>
+            figure, figcaption</del></p> -->
     </body>
 </html>
