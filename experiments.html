@@ -16,7 +16,7 @@
                      style-src 'self' 'unsafe-inline'; 
                      font-src http:; 
                      media-src http:;
-                     script-src 'unsafe-inline;">
+                     script-src 'self' 'nonce-ranom';">
 
         <!-- Facebook SEO Meta Tags Sample -->
         <meta property="og:url" content="experiments.html">
@@ -39,7 +39,7 @@
             }
            */
         </style>
-        <script>
+        <script nonce="ranom">
             document.addEventListener("DOMContentLoaded", (event) => {
                 console.log("Hi!");
                 const canvas = document.querySelector("canvas");
