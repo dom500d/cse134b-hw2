@@ -27,11 +27,8 @@
         <meta name="robots" content="noindex nofollow">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <style>
-            del {
-                background-color: red;
-                text-decoration: none;
-            }
-            
+            /*Testing out certain styles!*/
+            /*
             @font-face {
                 font-family: manrope;
                 src: url(assests/fonts/Manrope-VariableFont_wght.ttf);
@@ -40,10 +37,7 @@
             body {
                 font-family: manrope, sans-serif;
             }
-
-            table, table td{
-                border: 1px solid black;
-            }
+           */
         </style>
     </head>
     <body>
@@ -131,6 +125,14 @@
                             </tr>
                         </tbody>
                     </table>
+                    <aside>
+                        <h3>Besides from Classes: </h3>
+                        <ol>
+                            <li>President of the UCSD Cycling team</li>
+                            <li>Former Road Captain of the UCSD Cycling team</li>
+                            <li>Internship experience (check resume)!</li>
+                        </ol>
+                    </aside>
                 </div>
             </section>
         </main>
@@ -140,7 +142,7 @@
                 <h2 id="contact-header">Please Contact Me with any Opportunities!</h2>
                 <fieldset>
                     <legend>Send Message to Dominic Orlando</legend>
-                    <form action="https://httpbin.opg/" method="get">
+                    <form action="index.html" method="get">
                         <label for="contact-form-name">Name: </label>
                         <input id="contact-form-name" name="name" type="text" required>
                         <label for="contact-form-email">Email: </label>
@@ -161,13 +163,14 @@
                         </select>
                         <label for="tip">Would you like to tip me?</label>
                         <input type="range" list="ticks" min="0" max="5" id="tip" name="tip">
+                         <!-- How do I get the labels to show? -->
                         <datalist id="ticks">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
+                            <option value="0" label="0"></option>
+                            <option value="1" label="1"></option>
+                            <option value="2" label="2"></option>
+                            <option value="3" label="3"></option>
+                            <option value="4" label="4"></option>
+                            <option value="5" label="5"></option>
                         </datalist>
                         <br>
                         <br>
